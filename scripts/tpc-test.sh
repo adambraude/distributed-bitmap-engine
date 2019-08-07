@@ -20,7 +20,7 @@ docker-compose build
 
 echo "Starting master..."
 docker run -itd \
-	--mount "type=bind,source=/home/jahrme/Documents/dbie-data/,destination=/root/dbie/dbie-data/" \
+	--mount "type=bind,source=$DIR/tst_data/,destination=/root/dbie/dbie-data/" \
 	--name "dbie-master" dbie:prod bash
 
 echo "Starting slaves..."
